@@ -1,12 +1,16 @@
 {
-    "source": "src/index.html",
-    "scripts": {
-        "start": "parcel",
-        "build": "parcel build",
-        "check": "tsc"
-    },
-    "devDependencies": {
-        "parcel": "^2.0.1",
-        "typescript": "^4.5.4"
-    }
+	"source": "src/index.html",
+	"scripts": {
+		"start": "parcel",
+		"build": "parcel build",
+		"check": "tsc",
+		"lint": "eslint . --ext .ts"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.8.0",
+		"@typescript-eslint/parser": "^5.8.0",
+		"eslint": "^8.5.0",
+		"parcel": "^2.0.1",
+		"typescript": "^4.5.4"
+	}
 }

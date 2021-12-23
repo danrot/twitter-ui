@@ -1,0 +1,17 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": ["./tsconfig.json"]
+	},
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"brace-style": ["error", "1tbs"],
+		"curly": ["error"],
+		"indent": ["error", "tab"],
+		"no-unused-vars": ["error"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"],
+		"@typescript-eslint/no-unnecessary-condition": ["error"]
+	}
+}
