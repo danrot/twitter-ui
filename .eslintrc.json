@@ -7,11 +7,12 @@
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"brace-style": ["error", "1tbs"],
+		"comma-dangle": ["error", "always-multiline"],
 		"curly": ["error"],
 		"indent": ["error", "tab"],
-		"no-unused-vars": ["error"],
 		"quotes": ["error", "double"],
 		"semi": ["error", "always"],
-		"@typescript-eslint/no-unnecessary-condition": ["error"]
+		"@typescript-eslint/no-unnecessary-condition": ["error"],
+		"@typescript-eslint/no-unused-vars": ["error"]
 	}
 }
