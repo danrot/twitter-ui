@@ -8,12 +8,14 @@
 		"test": "jest"
 	},
 	"devDependencies": {
+		"@swc/core": "^1.2.135",
 		"@swc/jest": "^0.2.17",
 		"@types/jest": "^27.4.0",
 		"@typescript-eslint/eslint-plugin": "^5.8.0",
 		"@typescript-eslint/parser": "^5.8.0",
 		"eslint": "^8.5.0",
 		"jest": "^27.4.7",
+		"jest-fetch-mock": "^3.0.3",
 		"parcel": "^2.0.1",
 		"typescript": "^4.5.4"
 	},
@@ -26,7 +28,9 @@
 	"jest": {
 		"resetMocks": true,
 		"transform": {
-			"^.+\\.ts$": ["@swc/jest"]
+			"^.+\\.ts$": [
+				"@swc/jest"
+			]
 		}
 	}
 }
