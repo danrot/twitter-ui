@@ -4,6 +4,7 @@ import ListId from "../domain/ListId";
 import TwitterApiError from "./TwitterApiError";
 import TwitterListRepository from "./TwitterListRepository";
 
+/* global fetchMock */
 enableFetchMocks();
 
 // https://github.com/jefflau/jest-fetch-mock/issues/184#issuecomment-718058715

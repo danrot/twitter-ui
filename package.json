@@ -14,6 +14,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.8.0",
 		"@typescript-eslint/parser": "^5.8.0",
 		"eslint": "^8.5.0",
+		"eslint-config-danrot": "^3.0.0",
 		"jest": "^27.4.7",
 		"jest-fetch-mock": "^3.0.3",
 		"parcel": "^2.0.1",
