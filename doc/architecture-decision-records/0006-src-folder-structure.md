@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed
+Accepted
 
 ## Context
 
@@ -17,6 +17,9 @@ There will be the following folders:
 
 `twitter`
 : Contains the classes responsible for the communication with the twitter API
+
+`view`
+: Contains all the displaying view logic
 
 ## Consequences
 

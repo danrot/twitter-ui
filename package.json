@@ -1,5 +1,5 @@
 {
-	"source": "src/index.html",
+	"source": "src/view/index.html",
 	"scripts": {
 		"watch": "parcel watch",
 		"build": "parcel build",
