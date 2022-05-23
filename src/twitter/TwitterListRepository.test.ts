@@ -23,7 +23,7 @@ it("returns lists with id and name from response", async function() {
 	expect(lists).toEqual([new List("123" as ListId, "topic-1"), new List("456" as ListId, "topic-2")]);
 });
 
-it("returns empty list if response is unsuccessful", async function() {
+it("throws if response is unsuccessful", async function() {
 	fetchMock.mockResponse(JSON.stringify({}), {status: 500});
 
 	const twitterListRepository = new TwitterListRepository();
