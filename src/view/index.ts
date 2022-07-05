@@ -3,6 +3,10 @@ import ListId from "../domain/ListId";
 import TwitterListRepository from "../twitter/TwitterListRepository";
 import TwitterTweetRepository from "../twitter/TwitterTweetRepository";
 
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker.register(new URL("./service-worker.ts", import.meta.url));
+}
+
 const twitterListRepository = new TwitterListRepository();
 const twitterTweetRepository = new TwitterTweetRepository();
 

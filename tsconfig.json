@@ -1,6 +1,9 @@
 {
-    "compilerOptions": {
-        "noEmit": true,
-        "strict": true
-    }
+	"compilerOptions": {
+		"lib": ["dom", "es2022"],
+		"noEmit": true,
+		"module": "es2022",
+		"moduleResolution": "node",
+		"strict": true
+	}
 }
