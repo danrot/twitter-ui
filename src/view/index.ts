@@ -4,7 +4,7 @@ import TwitterListRepository from "../twitter/TwitterListRepository";
 import TwitterTweetRepository from "../twitter/TwitterTweetRepository";
 
 if ("serviceWorker" in navigator) {
-	navigator.serviceWorker.register(new URL("./service-worker.ts", import.meta.url));
+	navigator.serviceWorker.register(new URL("./service-worker.ts", import.meta.url), {type: "module"});
 }
 
 const twitterListRepository = new TwitterListRepository();
