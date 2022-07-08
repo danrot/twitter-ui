@@ -33,35 +33,24 @@ self.addEventListener("fetch", function(event) {
 
 	const path = new URL(request.url).pathname;
 
-	if (!ASSET_URLS.includes(path)) {
-		return;
+	if (ASSET_URLS.includes(path)) {
+		// @ts-ignore
+		event.respondWith(caches.open(ASSETS_CACHE_NAME).then((cache) => cache.match(request)));
 	}
 
-	// @ts-ignore
-	event.respondWith(caches.open(ASSETS_CACHE_NAME).then((cache) => cache.match(request)));
-});
+	if (path === "/api/lists/list.json") {
+		// @ts-ignore
+		event.respondWith((async function() {
+			const cache = await caches.open(DATA_CACHE_NAME);
+			const cachedResponse = await cache.match(request);
 
-self.addEventListener("fetch", function(event) {
-	// @ts-ignore
-	const {request} = event;
+			if (cachedResponse) {
+				return cachedResponse;
+			}
 
-	const path = new URL(request.url).pathname;
-
-	if (path !== "/api/lists/list.json") {
-		return;
+			const response = await fetch(request);
+			cache.put(request, response.clone());
+			return response;
+		})());
 	}
-
-	// @ts-ignore
-	event.respondWith((async function() {
-		const cache = await caches.open(DATA_CACHE_NAME);
-		const cachedResponse = await cache.match(request);
-
-		if (cachedResponse) {
-			return cachedResponse;
-		}
-
-		const response = await fetch(request);
-		cache.put(request, response.clone());
-		return response;
-	})());
 });
