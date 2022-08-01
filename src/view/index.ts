@@ -29,6 +29,6 @@ $listChooser.addEventListener("change", () => {
 	const tweetsPromise = twitterTweetRepository.findByList($listChooser.value as ListId);
 
 	tweetsPromise.then((tweets) => {
-		$tweets.innerHTML = tweets.map((tweet) => `<article>${tweet.text}</article>`).join("");
+		$tweets.innerHTML = tweets.map((tweet) => `<article class="tweet">${tweet.text}</article>`).join("");
 	});
 });
