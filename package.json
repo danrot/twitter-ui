@@ -8,7 +8,9 @@
 		"test": "jest"
 	},
 	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.6.2",
 		"@parcel/service-worker": "^2.6.2",
+		"@parcel/transformer-webmanifest": "^2.6.2",
 		"@swc/core": "^1.2.135",
 		"@swc/jest": "^0.2.17",
 		"@types/jest": "^27.4.0",

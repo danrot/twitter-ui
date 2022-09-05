@@ -1,0 +1,13 @@
+{
+	"name": "Twitter UI",
+	"icons": [
+		{
+			"src": "images/icons/512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"scope": "/"
+}
